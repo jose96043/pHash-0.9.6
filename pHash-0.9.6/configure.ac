@@ -122,10 +122,7 @@ fi])
 AC_DEFUN([AC_CHECK_FFMPEG],
 [
 AC_MSG_CHECKING([whether FFmpeg is present])
-AC_CHECK_LIB([avcodec], [av_frame_alloc], [], [AC_MSG_ERROR([
 
-*** libavcodec not found.
-You need FFmpeg. Get it at <http://ffmpeg.org/>])])
 
 AC_CHECK_LIB([avutil], [av_log_set_level], [], [AC_MSG_ERROR([
 
