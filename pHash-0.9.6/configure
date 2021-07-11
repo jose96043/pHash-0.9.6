@@ -16789,53 +16789,6 @@ then :
 
 { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking whether FFmpeg is present" >&5
 printf %s "checking whether FFmpeg is present... " >&6; }
-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for av_frame_alloc in -lavcodec" >&5
-printf %s "checking for av_frame_alloc in -lavcodec... " >&6; }
-if test ${ac_cv_lib_avcodec_av_frame_alloc+y}
-then :
-  printf %s "(cached) " >&6
-else $as_nop
-  ac_check_lib_save_LIBS=$LIBS
-LIBS="-lavcodec  $LIBS"
-cat confdefs.h - <<_ACEOF >conftest.$ac_ext
-/* end confdefs.h.  */
-
-namespace conftest {
-  extern "C" int av_frame_alloc ();
-}
-int
-main (void)
-{
-return conftest::av_frame_alloc ();
-  ;
-  return 0;
-}
-_ACEOF
-if ac_fn_cxx_try_link "$LINENO"
-then :
-  ac_cv_lib_avcodec_av_frame_alloc=yes
-else $as_nop
-  ac_cv_lib_avcodec_av_frame_alloc=no
-fi
-rm -f core conftest.err conftest.$ac_objext conftest.beam \
-    conftest$ac_exeext conftest.$ac_ext
-LIBS=$ac_check_lib_save_LIBS
-fi
-{ printf "%s\n" "$as_me:${as_lineno-$LINENO}: result: $ac_cv_lib_avcodec_av_frame_alloc" >&5
-printf "%s\n" "$ac_cv_lib_avcodec_av_frame_alloc" >&6; }
-if test "x$ac_cv_lib_avcodec_av_frame_alloc" = xyes
-then :
-  printf "%s\n" "#define HAVE_LIBAVCODEC 1" >>confdefs.h
-
-  LIBS="-lavcodec $LIBS"
-
-else $as_nop
-  as_fn_error $? "
-
-*** libavcodec not found.
-You need FFmpeg. Get it at <http://ffmpeg.org/>" "$LINENO" 5
-fi
-
 
 { printf "%s\n" "$as_me:${as_lineno-$LINENO}: checking for av_log_set_level in -lavutil" >&5
 printf %s "checking for av_log_set_level in -lavutil... " >&6; }
